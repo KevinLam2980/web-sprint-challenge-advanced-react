@@ -29,14 +29,21 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain how to build stateful class components.
+To build a stateful class component, you have to extend that component from react.component in order to inheret some of the class methods. You also need to define the state object, as well as super and constructor if you wish to inheret the class methods of react. Then you have to incorporate what you want the website to do into the methods that come with react's class components, such as the cDM and cDU.
 
 2. Describe the different phases of the component lifecycle.
+The component will first try to mount. The constructor will initialize the state, render will render the virtual component, then react updates the DOM and the componentDidMount will come into effect. Any time new props or setSate is called, react will run render again, which will update the DOM again, which is when componentDidUpdate will run. When the component has dont it's job, it will unmount, and conponentWillUnmount will run which can be used for cleaning up event listeners to prevent memory leakage.
 
 3. Demonstrate an understanding of class component lifecycle methods.
+ComponentDidMount is used to fetch initial data, set up event listeners and subscriptions and anything else you might want to do right after the initial state of the site is rendered.
+ComponentDidUpdate is used to update the DOM when there is a different between the previous state and the current state, which means it can be used to listen and watch for changes that are being made to the state.
+ComponentWillUnmount is used for cleaning up event listener and subscriptions
 
 4. Define stateful logic.
+Stateful logic is code that contains the use of state, such as hooks, custom hooks, class component state objects and useEffect. Stateful logic is used to define and execute differences in the state of the application.
 
 5. Describe how to test a React component with React Testing Library.
+You can install dependencies and run npm test because react comes with a testing library based off of jest. You can create js filed that resemble the name of the component or file you are going to try to test and add .test. between the file name and the js file label to easily find and understand which test files are for which component. You then import the component into the test file so it has access, and then you write your tests in the test file and watch them run in the terminal.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
